@@ -1,16 +1,31 @@
+import { Logo } from "./logo";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Home } from "./home";
+import { About } from "./about";
+import { Projects } from "./projects";
+import { Work } from "./work";
+
 export function App() {
   return (
-    <div className="w-screen h-screen bg-secondary">
-      <div className="flex flex-col space-y-4">
-        <h6 className="text-2.5xl font-open-sans font-semibold">hi, i'm</h6>
-        <h1 className="text-6xl m-0 font-bold font-futura text-primary">
-          Brandon Wang,
-        </h1>
-        <h6 className="text-2.5xl font-open-sans font-semibold">
-          a scroller placeholder.
-        </h6>
-      </div>
-    </div>
+    <>
+      <Router>
+        <Logo />
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/work">
+            <Work />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
