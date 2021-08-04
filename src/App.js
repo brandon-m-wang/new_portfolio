@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-screen h-screen bg-secondary">
+      <div className="flex flex-col space-y-4">
+        <h6 className="text-2.5xl font-open-sans font-semibold">hi, i'm</h6>
+        <h1 className="text-6xl m-0 font-bold font-futura text-primary">
+          Brandon Wang,
+        </h1>
+        <h6 className="text-2.5xl font-open-sans font-semibold">
+          a scroller placeholder.
+        </h6>
+      </div>
     </div>
   );
 }
