@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 export const NavBar = ({ active }) => {
   return (
     <div className="flex flex-col fixed right-12 top-9 text-right space-y-2">
-      <h6 className="font-semibold font-open-sans text-primary">
+      <h6
+        className="font-semibold font-open-sans text-primary"
+        onMouseOver={(e) => (e.target.style.fontWeight = "bold")}
+        onMouseOut={(e) => (e.target.style.fontWeight = "")}
+      >
         <Link to="/">
           {active === "Home" ? (
             <span
@@ -21,7 +25,11 @@ export const NavBar = ({ active }) => {
           )}
         </Link>
       </h6>
-      <h6 className="font-semibold font-open-sans text-primary">
+      <h6
+        className="font-semibold font-open-sans text-primary"
+        onMouseOver={(e) => (e.target.style.fontWeight = "bold")}
+        onMouseOut={(e) => (e.target.style.fontWeight = "")}
+      >
         <Link to="/about">
           {active === "About" ? (
             <span
@@ -39,7 +47,11 @@ export const NavBar = ({ active }) => {
           )}
         </Link>
       </h6>
-      <h6 className="font-semibold font-open-sans text-primary">
+      <h6
+        className="font-semibold font-open-sans text-primary"
+        onMouseOver={(e) => (e.target.style.fontWeight = "bold")}
+        onMouseOut={(e) => (e.target.style.fontWeight = "")}
+      >
         <Link to="/projects">
           {active === "Projects" ? (
             <span
@@ -57,7 +69,11 @@ export const NavBar = ({ active }) => {
           )}
         </Link>
       </h6>
-      <h6 className="font-semibold font-open-sans text-primary">
+      <h6
+        className="font-semibold font-open-sans text-primary"
+        onMouseOver={(e) => (e.target.style.fontWeight = "bold")}
+        onMouseOut={(e) => (e.target.style.fontWeight = "")}
+      >
         <Link to="/work">
           {active === "Work" ? (
             <span
