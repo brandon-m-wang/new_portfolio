@@ -4,28 +4,30 @@ import { Home } from "./home";
 import { About } from "./about";
 import { Projects } from "./projects";
 import { Work } from "./work";
+import { Snapshots } from "./snapshots";
 
 export function App() {
   return (
-    <>
-      <Router>
-        <Logo />
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/projects">
-            <Projects />
-          </Route>
-          <Route path="/work">
-            <Work />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
-    </>
+    <Router>
+      <Logo />
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/projects">
+          <Projects />
+        </Route>
+        <Route path="/work">
+          <Work />
+        </Route>
+        <Route path="/snaps">
+          <Snapshots />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
