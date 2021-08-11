@@ -10,12 +10,20 @@ module.exports = {
       backgroundColor: {
         primary: "#597788",
         secondary: "#EEF3F5",
+        highlight: "#ffc296",
       },
       textColor: {
         primary: "#597788",
         secondary: "#EEF3F5",
+        highlight: "#ffc296",
+      },
+      borderColor: {
+        primary: "#597788",
+        secondary: "#EEF3F5",
+        highlight: "#ffc296",
       },
       fontSize: {
+        "semi-sm": "0.925rem",
         "1.5xl": "1.375rem",
         "2.5xl": "1.6875rem",
       },
@@ -24,6 +32,20 @@ module.exports = {
         "1/8": "12.5%",
         "2/7": "28.57%",
         "1/12": "8.88%",
+      },
+      borderWidth: { 3: "3px" },
+      height: {
+        profile: "362px",
+        "profile-sm": "272px",
+        project: "256px",
+      },
+      width: {
+        profile: "345px",
+        "profile-sm": "240px",
+        project: "320px",
+      },
+      margin: {
+        33: "8.25rem",
       },
     },
   },
