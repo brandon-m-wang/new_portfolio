@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 export const NavBar = ({ active }) => {
   return (
-    <div className="flex flex-col fixed right-12 top-9 text-right space-y-2 select-none">
+    <div className="fixed bg-secondary z-20 w-full h-16 md:h-auto md:w-auto justify-end md:bg-transparent flex md:flex-col gap-x-2 sm:gap-x-5 md:gap-x-0 items-end md:right-12 md:pr-0 pr-3 md:top-9 pt-3 md:pt-0 pb-5 md:pb-0 text-right space-y-0.5 select-none text-sm sm:text-base lg:text-lg">
       <h6
-        className="font-open-sans text-lg"
+        className="font-open-sans"
         onMouseOver={(e) => (e.target.style.color = "#597788")}
         onMouseOut={(e) => (e.target.style.color = "")}
       >
@@ -26,7 +26,7 @@ export const NavBar = ({ active }) => {
         </Link>
       </h6>
       <h6
-        className="font-open-sans text-lg"
+        className="font-open-sans"
         onMouseOver={(e) => (e.target.style.color = "#597788")}
         onMouseOut={(e) => (e.target.style.color = "")}
       >
@@ -48,7 +48,7 @@ export const NavBar = ({ active }) => {
         </Link>
       </h6>
       <h6
-        className="text-lg font-open-sans"
+        className="font-open-sans"
         onMouseOver={(e) => (e.target.style.color = "#597788")}
         onMouseOut={(e) => (e.target.style.color = "")}
       >
@@ -70,7 +70,7 @@ export const NavBar = ({ active }) => {
         </Link>
       </h6>
       <h6
-        className="text-lg font-open-sans"
+        className="font-open-sans"
         onMouseOver={(e) => (e.target.style.color = "#597788")}
         onMouseOut={(e) => (e.target.style.color = "")}
       >
@@ -92,7 +92,7 @@ export const NavBar = ({ active }) => {
         </Link>
       </h6>
       <h6
-        className="font-open-sans text-lg"
+        className="font-open-sans"
         onMouseOver={(e) => (e.target.style.color = "#597788")}
         onMouseOut={(e) => (e.target.style.color = "")}
       >

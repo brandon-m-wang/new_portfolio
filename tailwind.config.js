@@ -38,14 +38,17 @@ module.exports = {
         profile: "362px",
         "profile-sm": "272px",
         project: "256px",
+        "project-sm": "192px",
       },
       width: {
-        profile: "345px",
+        profile: "350px",
         "profile-sm": "240px",
         project: "320px",
+        "project-sm": "240px",
       },
       margin: {
         33: "8.25rem",
+        15: "3.75rem",
       },
     },
   },

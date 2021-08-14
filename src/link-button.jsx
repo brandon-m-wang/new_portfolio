@@ -9,11 +9,11 @@ export const LinkButton = ({ text, link }) => {
           e.target.style.borderWidth = "2px";
         }}
         onMouseLeave={(e) => {
-          e.target.style.color = "#4D6674";
-          e.target.style.border = "solid #4D6674";
+          e.target.style.color = "#597788";
+          e.target.style.border = "solid #597788";
           e.target.style.borderWidth = "2px";
         }}
-        className="rounded-full w-24 cursor-pointer select-none text-center text-primary font-futura text-sm font-regular border-2 border-primary"
+        className="rounded-full w-24 cursor-pointer select-none text-center text-primary font-futura sm:text-sm text-xs font-regular border-2 border-primary"
       >
         {text}
       </div>
