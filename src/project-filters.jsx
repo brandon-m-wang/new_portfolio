@@ -18,6 +18,11 @@ export const ProjectFilters = ({ selected, handler }) => {
         selected={selected === "live site"}
         handler={handler}
       />
+      <FilterButton
+        text="coursework"
+        selected={selected === "coursework"}
+        handler={handler}
+      />
     </div>
   );
 };

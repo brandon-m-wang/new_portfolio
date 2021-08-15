@@ -13,6 +13,10 @@ import grassroots from "./resources/4.png";
 import parkinsons from "./resources/5.png";
 import educe from "./resources/6.png";
 import wildfire from "./resources/7.png";
+import gitlet from "./resources/8.png";
+import scheme from "./resources/9.png";
+import byow from "./resources/10.png";
+import tilegame from "./resources/11.png";
 
 export const Projects = () => {
   const projects = [
@@ -32,7 +36,7 @@ export const Projects = () => {
       stack: "JavaScript, Python, GCP Firestore",
       category: ["all projects", "hackathon"],
       description:
-        "Protecting marginalized communities from hate crimes in Seattle through a personalized, interactive heat map. Converts police report excel data to an API endpoint in real-time. Depending on the user's chosen race, ethnicity, gender, sexuality, and religion, the heat map redistributes itself to display the frequency and location of incidents by the user's chosen criteria.",
+        "A webapp protecting marginalized communities from hate crimes in Seattle through a personalized, interactive heat map. Converts police report excel data to an API endpoint in real-time. Depending on the user's chosen race, ethnicity, gender, sexuality, and religion, the heat map redistributes itself to display the frequency and location of incidents by the user's chosen criteria.",
       repo: "https://github.com/brandon-m-wang/safeguardSEA",
       awards: [
         "1st Place (SunHacks | DS/ML/AI App)",
@@ -45,7 +49,7 @@ export const Projects = () => {
       stack: "React.js, vis.js, Graph3D",
       category: ["all projects", "live site"],
       description:
-        "Visualizer for the process of Djikstra's, A*, Prim's, Kruskal's, and other graph traversal algorithms for the purposes of pathfinding and identifying SPTs and MSTs. Developed with React.js. Inludes a JavaScript Dijkstra's implementation along with a pathfinding variant that implements a tree structure to return shortest traversed path. Utilizes the react-graph-vis, vis-data, vis-network packages from vis.js.",
+        "A Visualizer for the process of Djikstra's, A*, Prim's, Kruskal's, and other graph traversal algorithms for the purposes of pathfinding and identifying SPTs and MSTs. Developed with React.js. Inludes a JavaScript Dijkstra's implementation along with a pathfinding variant that implements a tree structure to return shortest traversed path. Utilizes the react-graph-vis, vis-data, vis-network packages from vis.js.",
       repo: "https://github.com/brandon-m-wang/graph-algos-visualizer",
       live: "https://brandonwan.gg/graph-vis/",
       thumbnail: graph,
@@ -65,7 +69,7 @@ export const Projects = () => {
       stack: "NumPy, Matplotlib",
       category: ["all projects"],
       description:
-        "This is a simple lazy-learning k-NN classifier built from UCI ML repository training data provided by a 2018 comparative analysis of speech processing algorithms led by various researchers in Istanbul. The study the classifier is centered around leveraging signal data taken from simple speech recordings to provide clinically feasible information. Currently ~85% accuracy in Parkinson's classification using a holdout validation scheme.",
+        "A simple lazy-learning k-NN classifier built from UCI ML repository training data provided by a 2018 comparative analysis of speech processing algorithms led by various researchers in Istanbul. The study the classifier is centered around leveraging signal data taken from simple speech recordings to provide clinically feasible information. Currently ~85% accuracy in Parkinson's classification using a holdout validation scheme.",
       repo: "https://github.com/brandon-m-wang/parkinsonsclassifier",
       thumbnail: parkinsons,
     },
@@ -88,6 +92,42 @@ export const Projects = () => {
       repo: "https://github.com/brandon-m-wang/wildfirewatchems",
       awards: ["Top 8 App (HackATL | Overall)"],
       thumbnail: wildfire,
+    },
+    {
+      title: "Gitlet",
+      stack: "Java, GNU Make",
+      category: ["all projects", "coursework"],
+      description:
+        "A lite version of GitHub with file content tracking functionality; closely recreates features like git commit, staging, status, log, branch, and remote pushing/pulling from a local development server. Also includes more complex functionality like maintaining related branch commit sequences, merging and resetting, and commit searching. Designed and implemented internal file structures and utilized a wide spread of data structures and object serialization along with JUnit tests.",
+      thumbnail: gitlet,
+      request: true,
+    },
+    {
+      title: "Open World Generator",
+      stack: "Java, StdDraw",
+      category: ["all projects", "coursework"],
+      description:
+        "A 2D two-player, tile-based open world generation engine. World generation is handled with adjacency list generation in conjunction with graph-based search algorithms to create defined rooms and hallways. The players are able to generate playable maps from a seed with consistency, and interact with the world elements in a combat-based capture the flag environment. Scores, weapons, portals, and other creative mechanics are built in to the game's core functionality.",
+      thumbnail: byow,
+      request: true,
+    },
+    {
+      title: "Scheme Language Interpreter",
+      stack: "Python, Scheme",
+      category: ["all projects", "coursework"],
+      description:
+        "An interpreter for the functional Lisp dialect Scheme which parses Scheme code via lexicographical and syntactical analysis. Lexicographical interpretation is done through the tokenization of input strings. Syntactic analysis is performed through mutually recursive functions for validation. Handles core functionality like define, eval, and map, along with user-defined lambda functions. Also includes list procedures and special conditional forms.",
+      thumbnail: scheme,
+      request: true,
+    },
+    {
+      title: "2048 Clone",
+      stack: "Java, MVC",
+      category: ["all projects", "coursework"],
+      description:
+        "A 2048 clone which accurately recreates fundamental game functionality like move recognition, max tile, board rotation, and tile states. Utilizes the model-view-controller design pattern in which the model represents the game board state, the view being the GUI, and the controller which handles and validates user input.",
+      thumbnail: tilegame,
+      request: true,
     },
   ];
 
@@ -156,7 +196,13 @@ export const Projects = () => {
                         ))}
                       </div>
                     )}
-                    <div className="flex sm:flex-row flex-col gap-y-2 sm:gap-y-0 gap-x-2">
+                    <div className="flex sm:flex-row flex-col flex-wrap gap-y-2 gap-x-2">
+                      {project.request && (
+                        <LinkButton
+                          text="request"
+                          link={"mailto:wangb@berkeley.edu"}
+                        />
+                      )}
                       {project.demo && (
                         <ToggleButton
                           text="toggle demo"

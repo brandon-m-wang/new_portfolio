@@ -1,9 +1,9 @@
 import { HeaderText } from "./header-text";
 import { NavBar } from "./navbar";
 import Gallery from "react-photo-gallery";
-import loading from "./resources/loading_image.png"; // todo: loading graphic while promise resolves
+// import loading from "./resources/loading_image.png"; // todo: loading graphic while promise resolves
 import { useEffect, useState } from "react";
-import { Button } from "./button";
+// import { Button } from "./button";
 
 function importAll(r) {
   return r.keys().map(r);
@@ -91,11 +91,11 @@ export const Snapshots = () => {
             <Gallery photos={photosResolved} direction={"column"} />
           )}
         </div>
-        <Button
+        {/* <Button
           text="⇑"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           additionalStyles="fixed md:bottom-12 md:right-12 bottom-3 right-3"
-        />
+        /> */}
       </div>
     </div>
   );
