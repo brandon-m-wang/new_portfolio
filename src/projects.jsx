@@ -94,7 +94,7 @@ export const Projects = () => {
   const [selectedFilter, setSelectedFilter] = useState("all projects");
 
   return (
-    <div className="w-screen h-screen bg-secondary">
+    <div className="bg-secondary">
       <NavBar active="Projects" />
       <div className="absolute left-1/6 right-1/12 top-24 w-2/3">
         <HeaderText text="projects" />

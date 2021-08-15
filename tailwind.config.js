@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        futura: "Futura",
+        futura: ["Futura", "OpenSauceTwoSemiBold"],
         "open-sans": "Open Sans",
       },
       backgroundColor: {

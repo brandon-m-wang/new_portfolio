@@ -22,7 +22,7 @@ export const About = () => {
   };
 
   return (
-    <div className="w-100 h-100 overflow-visible bg-secondary">
+    <div className="bg-secondary">
       <NavBar active="About" />
       <div className="absolute left-1/6 right-1/12 top-24 w-2/3">
         <HeaderText text="about myself" />

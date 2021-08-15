@@ -19,7 +19,7 @@ export const Work = () => {
   ];
 
   return (
-    <div className="w-screen h-screen bg-secondary">
+    <div className="bg-secondary">
       <NavBar active={"Work"} />
       <div className="absolute left-1/6 right-1/12 top-24 lg:w-2/3 w-auto">
         <HeaderText text="employment" />
