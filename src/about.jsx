@@ -1,6 +1,6 @@
 import { NavBar } from "./navbar";
 import { HeaderText } from "./header-text";
-import pic from "./resources/pic1.png";
+import pic from "./resources/pic4.JPEG";
 import { useEffect, useRef } from "react";
 import { Links } from "./links";
 import { Icon } from "@iconify/react";

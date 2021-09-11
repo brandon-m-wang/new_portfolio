@@ -14,6 +14,7 @@ import parkinsons from "./resources/5.png";
 import educe from "./resources/6.png";
 import wildfire from "./resources/7.png";
 import gitlet from "./resources/8.png";
+import gitletDemo from "./resources/gitlet_demo.gif";
 import scheme from "./resources/9.png";
 import byow from "./resources/10.png";
 import tilegame from "./resources/11.png";
@@ -74,6 +75,16 @@ export const Projects = () => {
       thumbnail: parkinsons,
     },
     {
+      title: "Gitlet",
+      stack: "Java, Make",
+      category: ["all projects", "coursework"],
+      description:
+        "A lite version of GitHub with file content tracking functionality; closely recreates features like git commit, staging, status, log, branch, and remote pushing/pulling from a local development server. Also includes more complex functionality like maintaining related branch commit sequences, merging and resetting, and commit searching. Designed and implemented internal file structures and utilized a wide spread of data structures and object serialization along with JUnit tests.",
+      thumbnail: gitlet,
+      request: true,
+      demo: gitletDemo,
+    },
+    {
       title: "Educe",
       stack: "React.js, GCP Firestore",
       category: ["all projects", "hackathon"],
@@ -92,15 +103,6 @@ export const Projects = () => {
       repo: "https://github.com/brandon-m-wang/wildfirewatchems",
       awards: ["Top 8 App (HackATL | Overall)"],
       thumbnail: wildfire,
-    },
-    {
-      title: "Gitlet",
-      stack: "Java, GNU Make",
-      category: ["all projects", "coursework"],
-      description:
-        "A lite version of GitHub with file content tracking functionality; closely recreates features like git commit, staging, status, log, branch, and remote pushing/pulling from a local development server. Also includes more complex functionality like maintaining related branch commit sequences, merging and resetting, and commit searching. Designed and implemented internal file structures and utilized a wide spread of data structures and object serialization along with JUnit tests.",
-      thumbnail: gitlet,
-      request: true,
     },
     {
       title: "Open World Generator",
@@ -197,12 +199,6 @@ export const Projects = () => {
                       </div>
                     )}
                     <div className="flex sm:flex-row flex-col flex-wrap gap-y-2 gap-x-2">
-                      {project.request && (
-                        <LinkButton
-                          text="request"
-                          link={"mailto:wangb@berkeley.edu"}
-                        />
-                      )}
                       {project.demo && (
                         <ToggleButton
                           text="toggle demo"
@@ -228,6 +224,12 @@ export const Projects = () => {
                       )}
                       {project.repo && (
                         <LinkButton text="repo" link={project.repo} />
+                      )}
+                      {project.request && (
+                        <LinkButton
+                          text="request"
+                          link={"mailto:wangb@berkeley.edu"}
+                        />
                       )}
                     </div>
                   </div>
