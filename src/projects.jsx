@@ -1,10 +1,12 @@
 import { NavBar } from "./navbar";
 import { HeaderText } from "./header-text";
 import { ProjectFilters } from "./project-filters";
-import { Icon } from "@iconify/react";
+import { calculateSize, Icon } from "@iconify/react";
 import { useState } from "react";
 import { LinkButton } from "./link-button";
 import { ToggleButton } from "./toggle-button";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
 import contextr from "./resources/1.png";
 import contextrDemo from "./resources/contextr_demo.gif";
 import safeguard from "./resources/2.png";
@@ -154,9 +156,34 @@ export const Projects = () => {
                       id={project.title + " frame"}
                       className="border-3 inline-block z-10 flex-shrink-0 rounded-lg border-primary sm:h-project sm:w-project h-project-sm w-project-sm"
                     />
+                    <div
+                      id={project.title + " loader"}
+                      style={{
+                        position: "absolute",
+                        top: "calc(50% - 50px + 0.75rem)",
+                        left: "calc(50% - 50px + 0.75rem)",
+                        zIndex: 100,
+                      }}
+                    >
+                      <Loader
+                        type="TailSpin"
+                        color="#ffc296"
+                        radius={0}
+                        height={100}
+                        width={100}
+                        timeout={0}
+                      />
+                    </div>
                     <img
                       id={project.title}
                       src={project.thumbnail}
+                      onLoad={() => {
+                        document.getElementById(
+                          project.title + " loader"
+                        ).style.display = "none";
+                        document.getElementById(project.title).style.filter =
+                          "none";
+                      }}
                       alt=""
                       className="absolute top-3 left-3 sm:h-project sm:w-project h-project-sm w-project-sm border-3 border-primary rounded-lg object-cover"
                     />
@@ -206,15 +233,15 @@ export const Projects = () => {
                             if (active) {
                               document.getElementById(project.title).src =
                                 project.thumbnail;
-                              document.getElementById(
-                                project.title + " frame"
-                              ).style.zIndex = "10";
                             } else {
+                              document.getElementById(
+                                project.title + " loader"
+                              ).style.display = "block";
+                              document.getElementById(
+                                project.title
+                              ).style.filter = "brightness(50%)";
                               document.getElementById(project.title).src =
                                 project.demo;
-                              document.getElementById(
-                                project.title + " frame"
-                              ).style.zIndex = "0";
                             }
                           }}
                         />
