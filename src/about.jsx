@@ -1,18 +1,18 @@
 import { NavBar } from "./navbar";
 import { HeaderText } from "./header-text";
 import pic from "./resources/pic4.JPEG";
-import { useEffect, useRef } from "react";
+// import { useEffect, useRef } from "react";
 import { Links } from "./links";
 import { Icon } from "@iconify/react";
 
 export const About = () => {
-  if (!localStorage.getItem("imgData")) {
-    localStorage.setItem("imgData", pic);
-  }
-  const picRef = useRef();
-  useEffect(() => {
-    picRef.current.src = localStorage.getItem("imgData");
-  }, [picRef]);
+  // if (!localStorage.getItem("imgData")) {
+  //   localStorage.setItem("imgData", pic);
+  // }
+  // const picRef = useRef();
+  // useEffect(() => {
+  //   picRef.current.src = localStorage.getItem("imgData");
+  // }, [picRef]);
 
   const stack = {
     Frontend: ["React.js", "TypeScript", "TailwindCSS", "Cypress"],
@@ -30,8 +30,7 @@ export const About = () => {
           <div className="relative lg:justify-self-end lg:mr-32 mr-10 self-center">
             <div className="border-3 relative rounded-xl inline-block z-10 border-primary lg:h-profile lg:w-profile h-profile-sm w-profile-sm" />
             <img
-              src=""
-              ref={picRef}
+              src={pic}
               alt=""
               className="lg:h-profile lg:w-profile h-profile-sm w-profile-sm object-cover absolute"
               style={{
