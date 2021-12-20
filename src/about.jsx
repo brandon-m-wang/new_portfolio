@@ -1,6 +1,6 @@
 import { NavBar } from "./navbar";
 import { HeaderText } from "./header-text";
-import pic from "./resources/pic4.JPEG";
+import pic from "./resources/portshot.JPG";
 // import { useEffect, useRef } from "react";
 import { Links } from "./links";
 import { Icon } from "@iconify/react";
@@ -55,9 +55,9 @@ export const About = () => {
             studying Computer Science and Data Science with a concentration in
             Applied Mathematics.
             <br></br>
-            <br></br>I'm a producer, mogul skier, and ginger beer fan. I enjoy
-            building things and watching them work. From beautifully simple UIs,
-            to complex backend infrastructures, I love working the{" "}
+            <br></br>I'm a producer and amateur skier. I do table tennis @ Cal
+            TTC, and I play the piano. I also build things.<br></br>
+            <br></br>This summer I'll be working at{" "}
             <span
               style={{
                 background:
@@ -65,11 +65,37 @@ export const About = () => {
                 display: "inline",
               }}
             >
-              full stack
+              Apple
+            </span>{" "}
+            in Cupertino, and this fall I'll be working at{" "}
+            <span
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(255,255,255,0) 60%, #FFD0AE 60%)",
+                display: "inline",
+              }}
+            >
+              TikTok
+            </span>{" "}
+            in Los Angeles.
+            <br></br>
+            <br></br>
+            I'm currently building out{" "}
+            <a href="cs198-75.org" target="_blank">
+              CS 198-75: Full Stack Web Development
+            </a>{" "}
+            sponsored by{" "}
+            <span
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(255,255,255,0) 60%, #FFD0AE 60%)",
+                display: "inline",
+              }}
+            >
+              Prof. Josh Hug
             </span>
-            .<br></br>
-            <br></br>When I'm not working, I'm usually either playing poker,
-            watching shows, learning a new framework, or playing the piano.
+            , working on CMS automation with nunjucks, 11ty, and netlify, in addition to curriculum development with a team
+            of TAs. I'll be lecturing in Evans 60 this coming Spring.
             <Links />
           </div>
         </div>
