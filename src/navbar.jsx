@@ -1,118 +1,113 @@
 import { Link } from "react-router-dom";
+import { Icon } from "@iconify/react";
 
 export const NavBar = ({ active }) => {
+  const regColor = "#668394";
+  const highlightColor = "#829cab";
   return (
-    <div className="fixed bg-secondary z-20 w-full h-16 md:h-auto md:w-auto justify-end md:bg-transparent flex md:flex-col gap-x-2 sm:gap-x-5 md:gap-x-0 items-end md:right-12 md:pr-0 pr-3 md:top-9 pt-3 md:pt-0 pb-5 md:pb-0 text-right space-y-0.5 select-none text-sm sm:text-base lg:text-lg">
-      <h6
-        className="font-open-sans"
-        onMouseOver={(e) => (e.target.style.color = "#597788")}
-        onMouseOut={(e) => (e.target.style.color = "")}
-      >
-        <Link to="/">
-          {active === "Home" ? (
-            <span
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(255,255,255,0) 65%, #FFD0AE 65%)",
-                display: "inline",
-              }}
-              className="font-semibold text-primary"
-            >
-              home
-            </span>
-          ) : (
-            "home"
-          )}
-        </Link>
-      </h6>
-      <h6
-        className="font-open-sans"
-        onMouseOver={(e) => (e.target.style.color = "#597788")}
-        onMouseOut={(e) => (e.target.style.color = "")}
-      >
-        <Link to="/about">
-          {active === "About" ? (
-            <span
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(255,255,255,0) 65%, #FFD0AE 65%)",
-                display: "inline",
-              }}
-              className="font-semibold text-primary"
-            >
-              about
-            </span>
-          ) : (
-            "about"
-          )}
-        </Link>
-      </h6>
-      <h6
-        className="font-open-sans"
-        onMouseOver={(e) => (e.target.style.color = "#597788")}
-        onMouseOut={(e) => (e.target.style.color = "")}
-      >
-        <Link to="/projects">
-          {active === "Projects" ? (
-            <span
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(255,255,255,0) 65%, #FFD0AE 65%)",
-                display: "inline",
-              }}
-              className="font-semibold text-primary"
-            >
-              projects
-            </span>
-          ) : (
-            "projects"
-          )}
-        </Link>
-      </h6>
-      <h6
-        className="font-open-sans"
-        onMouseOver={(e) => (e.target.style.color = "#597788")}
-        onMouseOut={(e) => (e.target.style.color = "")}
-      >
-        <Link to="/work">
-          {active === "Work" ? (
-            <span
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(255,255,255,0) 65%, #FFD0AE 65%)",
-                display: "inline",
-              }}
-              className="font-semibold text-primary"
-            >
-              work
-            </span>
-          ) : (
-            "work"
-          )}
-        </Link>
-      </h6>
-      <h6
-        className="font-open-sans"
-        onMouseOver={(e) => (e.target.style.color = "#597788")}
-        onMouseOut={(e) => (e.target.style.color = "")}
-      >
-        <Link to="/snaps">
-          {active === "Snaps" ? (
-            <span
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(255,255,255,0) 65%, #FFD0AE 65%)",
-                display: "inline",
-              }}
-              className="font-semibold text-primary"
-            >
-              snaps
-            </span>
-          ) : (
-            "snaps"
-          )}
-        </Link>
-      </h6>
+    <div className="absolute h-auto md:w-auto w-full md:-right-10 md:top-0 -top-10 z-10 flex md:flex-col flex-row content-center md:justify-end justify-center bg-transparent md:space-x-0 space-x-4">
+      <Link to="/">
+        {active === "Home" ? (
+          <Icon
+            icon="ant-design:home-filled"
+            color="white"
+            style={{ fontSize: "1.82rem" }}
+          />
+        ) : (
+          <Icon
+            onMouseEnter={(e) => (e.target.style.color = highlightColor)}
+            onMouseLeave={(e) => (e.target.style.color = regColor)}
+            icon="ant-design:home-outlined"
+            color={regColor}
+            style={{ fontSize: "1.82rem" }}
+          />
+        )}
+      </Link>
+      <Link to="/about">
+        {active === "About" ? (
+          <Icon
+            icon="ant-design:profile-filled"
+            color="white"
+            style={{ fontSize: "1.82rem" }}
+          />
+        ) : (
+          <Icon
+            onMouseEnter={(e) => (e.target.style.color = highlightColor)}
+            onMouseLeave={(e) => (e.target.style.color = regColor)}
+            icon="ant-design:profile-outlined"
+            color={regColor}
+            style={{ fontSize: "1.82rem" }}
+          />
+        )}
+      </Link>
+      <Link to="/projects">
+        {active === "Projects" ? (
+          <Icon
+            icon="ant-design:folder-open-filled"
+            color="white"
+            style={{ fontSize: "1.82rem" }}
+          />
+        ) : (
+          <Icon
+            onMouseEnter={(e) => (e.target.style.color = highlightColor)}
+            onMouseLeave={(e) => (e.target.style.color = regColor)}
+            icon="ant-design:folder-open"
+            color={regColor}
+            style={{ fontSize: "1.82rem" }}
+          />
+        )}
+      </Link>
+      <Link to="/work">
+        {active === "Work" ? (
+          <Icon
+            icon="ant-design:container-filled"
+            color="white"
+            style={{ fontSize: "1.82rem" }}
+          />
+        ) : (
+          <Icon
+            onMouseEnter={(e) => (e.target.style.color = highlightColor)}
+            onMouseLeave={(e) => (e.target.style.color = regColor)}
+            icon="ant-design:container-outlined"
+            color={regColor}
+            style={{ fontSize: "1.82rem" }}
+          />
+        )}
+      </Link>
+      <Link to="/teaching">
+        {active === "Teaching" ? (
+          <Icon
+            icon="ant-design:highlight-filled"
+            color="white"
+            style={{ fontSize: "1.82rem" }}
+          />
+        ) : (
+          <Icon
+            onMouseEnter={(e) => (e.target.style.color = highlightColor)}
+            onMouseLeave={(e) => (e.target.style.color = regColor)}
+            icon="ant-design:highlight-outlined"
+            color={regColor}
+            style={{ fontSize: "1.82rem" }}
+          />
+        )}
+      </Link>
+      <Link to="/notes">
+        {active === "Notes" ? (
+          <Icon
+            icon="ant-design:book-filled"
+            color="white"
+            style={{ fontSize: "1.82rem" }}
+          />
+        ) : (
+          <Icon
+            onMouseEnter={(e) => (e.target.style.color = highlightColor)}
+            onMouseLeave={(e) => (e.target.style.color = regColor)}
+            icon="ant-design:book-outlined"
+            color={regColor}
+            style={{ fontSize: "1.82rem" }}
+          />
+        )}
+      </Link>
     </div>
   );
 };

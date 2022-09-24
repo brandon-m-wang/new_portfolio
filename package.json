@@ -12,6 +12,7 @@
     "react-back-to-top-button": "0.0.14",
     "react-dom": "^17.0.2",
     "react-loader-spinner": "^4.0.0",
+    "react-pdf": "^6.0.0-beta.3",
     "react-photo-gallery": "^8.0.0",
     "react-rotating-text": "^1.4.1",
     "react-router-dom": "^5.2.0",

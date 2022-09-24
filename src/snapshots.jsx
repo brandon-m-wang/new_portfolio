@@ -85,7 +85,7 @@ export const Snapshots = () => {
     <div className="bg-secondary">
       <NavBar active={"Snaps"} />
       <div className="absolute left-1/6 right-1/12 top-24 w-2/3">
-        <HeaderText text="me, in pictures" />
+        <HeaderText text="pictures" />
         <div className="mt-11 mb-32">
           {photosResolved && (
             <Gallery photos={photosResolved} direction={"column"} />

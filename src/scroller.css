@@ -1,9 +1,9 @@
 .react-rotating-text-cursor {
   display: inline-block;
-  transform: translateY(-2px) translateX(-2.5px);
+  transform: translateY(-2.5px) translateX(0px);
   animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s
     infinite;
-  color: #ffc296;
+  visibility: hidden;
 }
 
 @keyframes blinking-cursor {

@@ -1,9 +1,9 @@
 import { Icon } from "@iconify/react";
 
 export const Links = () => {
-  const highlightColor = "#ffc296";
+  const highlightColor = "#668394";
   return (
-    <div className="flex flex-row space-x-8 pt-8 items-center">
+    <div className="flex flex-row md:space-x-5 space-x-3 md:pt-8 pt-5 items-center">
       <a
         rel="noopener noreferrer"
         href="https://www.instagram.com/brandonwan.gg/"
@@ -25,14 +25,14 @@ export const Links = () => {
         <Icon
           onMouseEnter={(e) => (e.target.style.color = highlightColor)}
           onMouseLeave={(e) => (e.target.style.color = "#4D6674")}
-          icon="akar-icons:linkedin-fill"
+          icon="akar-icons:linkedin-box-fill"
           color="#4D6674"
           style={{ fontSize: "1.5rem" }}
         />
       </a>
       <a
         rel="noopener noreferrer"
-        href="https://open.spotify.com/artist/4yd3Sjs98mo2coBsK1wpPN"
+        href="https://open.spotify.com/user/brandonwangton?si=0ee1c30fe2fc454b"
         target="_blank"
       >
         <Icon

@@ -135,136 +135,202 @@ export const Projects = () => {
     },
   ];
 
-  const [selectedFilter, setSelectedFilter] = useState("all projects");
+  const newProjects = [
+    {
+      title: "Multithreaded Server in C",
+    },
+    {
+      title: "80x86 PintOS",
+    },
+    {
+      title: "Unix-like Shell",
+    },
+    {
+      title: "Dynamic Memory Allocator",
+    },
+    {
+      title: "High-frequency Rust HTTP Server",
+    },
+    {
+      title: "Concurrent Banking Service in C++",
+    },
+    {
+      title: "Securities Trading Bot",
+    },
+    {
+      title: "Jane Street Puzzles",
+    },
+    {
+      title: "Low-latency Matrix Computation in C",
+    },
+    {
+      title: "32-bit RISC-V CPU",
+    },
+    {
+      title: "Voice Controlled Rover",
+    },
+    {
+      title: "Git Version Control Clone",
+    },
+    {
+      title: "Contextr.io",
+    },
+    {
+      title: "Graph Algorithms Visualizer",
+    },
+  ];
+
+  // const [selectedFilter, setSelectedFilter] = useState("all projects");
 
   return (
-    <div className="bg-secondary">
-      <NavBar active="Projects" />
-      <div className="absolute left-1/6 right-1/12 top-24 w-2/3">
-        <HeaderText text="projects" />
-        <ProjectFilters selected={selectedFilter} handler={setSelectedFilter} />
-        <div className="relative lg:grid lg:grid-cols-1 flex flex-col pt-10 mb-32">
-          {projects.map(
-            (project) =>
-              project.category.includes(selectedFilter) && (
-                <div
-                  key={project.title}
-                  className="relative flex lg:flex-row flex-col items-center gap-x-16 my-10"
-                >
-                  <div className="relative sm:h-project sm:w-project h-project-sm w-project-sm lg:mr-0 mr-5">
-                    <div
-                      id={project.title + " frame"}
-                      className="border-3 inline-block z-10 flex-shrink-0 rounded-lg border-primary sm:h-project sm:w-project h-project-sm w-project-sm"
-                    />
-                    <div
-                      id={project.title + " loader"}
-                      style={{
-                        position: "absolute",
-                        top: "calc(50% - 50px + 0.75rem)",
-                        left: "calc(50% - 50px + 0.75rem)",
-                        zIndex: 100,
-                      }}
-                    >
-                      <Loader
-                        type="TailSpin"
-                        color="#ffc296"
-                        radius={0}
-                        height={100}
-                        width={100}
-                        timeout={0}
-                      />
-                    </div>
-                    <img
-                      id={project.title}
-                      src={project.thumbnail}
-                      onLoad={() => {
-                        document.getElementById(
-                          project.title + " loader"
-                        ).style.display = "none";
-                        document.getElementById(project.title).style.filter =
-                          "none";
-                      }}
-                      alt=""
-                      className="absolute top-3 left-3 sm:h-project sm:w-project h-project-sm w-project-sm border-3 border-primary rounded-lg object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h6 className="text-lg font-semibold leading-3 mb-5 lg:mt-0 mt-12 font-open-sans">
-                      {project.title}
-                      <br className="xl:hidden" />
-                      <br className="xl:hidden" />
-                      <span
-                        style={{
-                          background:
-                            "linear-gradient(180deg, rgba(255,255,255,0) 60%, #FFD0AE 60%)",
-                          display: "inline",
-                        }}
-                        className="xl:float-right text-semi-sm -mt-1 leading-5 font-normal"
-                      >
-                        {project.stack}
-                      </span>
-                    </h6>
-                    <p className="sm:text-semi-sm text-sm font-open-sans font-normal mb-5">
-                      {project.description}
-                    </p>
-                    {project.awards && (
-                      <div className="mb-5">
-                        {project.awards.map((award) => (
-                          <div key={award} className="flex flex-col mt-1">
-                            <div className="flex items-center gap-x-2">
-                              <Icon
-                                icon="entypo:medal"
-                                color="#4D6674"
-                                style={{ fontSize: "1.5rem" }}
-                              />
-                              <h6 className="font-open-sans font-semibold text-sm text-primary">
-                                {award}
-                              </h6>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                    <div className="flex sm:flex-row flex-col flex-wrap gap-y-2 gap-x-2">
-                      {project.demo && (
-                        <ToggleButton
-                          text="toggle demo"
-                          handler={(active) => {
-                            if (active) {
-                              document.getElementById(project.title).src =
-                                project.thumbnail;
-                            } else {
-                              document.getElementById(
-                                project.title + " loader"
-                              ).style.display = "block";
-                              document.getElementById(
-                                project.title
-                              ).style.filter = "brightness(50%)";
-                              document.getElementById(project.title).src =
-                                project.demo;
-                            }
-                          }}
-                        />
-                      )}
-                      {project.live && (
-                        <LinkButton text="live site" link={project.live} />
-                      )}
-                      {project.repo && (
-                        <LinkButton text="repo" link={project.repo} />
-                      )}
-                      {project.request && (
-                        <LinkButton
-                          text="request"
-                          link={"mailto:wangb@berkeley.edu"}
-                        />
-                      )}
-                    </div>
-                  </div>
-                </div>
-              )
-          )}
+    <div className="w-full h-full flex justify-center">
+      <div className="lg:w-card lg:h-card h-card-m md:w-card-m sm:w-card-sm w-card-tn flex bg-eggshell self-center">
+        <div className="w-full h-full flex flex-col relative md:pb-14 pb-8">
+          <NavBar active="Projects" />
+          <h1 className="mb-5 text-2xl mt-14 ml-14 w-auto">Projects (WIP)</h1>
+          <div className="flex flex-1 h-full md:text-sm text-sm p-14 pt-0 pb-0 justify-start flex-col left-1/8 top-2/7 overflow-scroll">
+            {newProjects.map((project) => (
+              <p>
+                {project.title}
+                <br></br>
+              </p>
+            ))}
+            <br></br>* i'll update this eventually
+          </div>
         </div>
       </div>
     </div>
   );
 };
+
+//   return (
+//     <div className="bg-secondary">
+//       <NavBar active="Projects" />
+//       <div className="absolute left-1/6 right-1/12 top-24 w-2/3">
+//         <HeaderText text="projects" />
+//         <ProjectFilters selected={selectedFilter} handler={setSelectedFilter} />
+//         <div className="relative lg:grid lg:grid-cols-1 flex flex-col pt-10 mb-32">
+//           {projects.map(
+//             (project) =>
+//               project.category.includes(selectedFilter) && (
+//                 <div
+//                   key={project.title}
+//                   className="relative flex lg:flex-row flex-col items-center gap-x-16 my-10"
+//                 >
+//                   <div className="relative sm:h-project sm:w-project h-project-sm w-project-sm lg:mr-0 mr-5">
+//                     <div
+//                       id={project.title + " frame"}
+//                       className="border-3 inline-block z-10 flex-shrink-0 rounded-lg border-primary sm:h-project sm:w-project h-project-sm w-project-sm"
+//                     />
+//                     <div
+//                       id={project.title + " loader"}
+//                       style={{
+//                         position: "absolute",
+//                         top: "calc(50% - 50px + 0.75rem)",
+//                         left: "calc(50% - 50px + 0.75rem)",
+//                         zIndex: 100,
+//                       }}
+//                     >
+//                       <Loader
+//                         type="TailSpin"
+//                         color="#ffc296"
+//                         radius={0}
+//                         height={100}
+//                         width={100}
+//                         timeout={0}
+//                       />
+//                     </div>
+//                     <img
+//                       id={project.title}
+//                       src={project.thumbnail}
+//                       onLoad={() => {
+//                         document.getElementById(
+//                           project.title + " loader"
+//                         ).style.display = "none";
+//                         document.getElementById(project.title).style.filter =
+//                           "none";
+//                       }}
+//                       alt=""
+//                       className="absolute top-3 left-3 sm:h-project sm:w-project h-project-sm w-project-sm border-3 border-primary rounded-lg object-cover"
+//                     />
+//                   </div>
+//                   <div>
+//                     <h6 className="text-lg font-semibold leading-3 mb-5 lg:mt-0 mt-12 font-open-sans">
+//                       {project.title}
+//                       <br className="xl:hidden" />
+//                       <br className="xl:hidden" />
+//                       <span
+//                         style={{
+//                           background:
+//                             "linear-gradient(180deg, rgba(255,255,255,0) 60%, #FFD0AE 60%)",
+//                           display: "inline",
+//                         }}
+//                         className="xl:float-right text-semi-sm -mt-1 leading-5 font-normal"
+//                       >
+//                         {project.stack}
+//                       </span>
+//                     </h6>
+//                     <p className="sm:text-semi-sm text-sm font-open-sans font-normal mb-5">
+//                       {project.description}
+//                     </p>
+//                     {project.awards && (
+//                       <div className="mb-5">
+//                         {project.awards.map((award) => (
+//                           <div key={award} className="flex flex-col mt-1">
+//                             <div className="flex items-center gap-x-2">
+//                               <Icon
+//                                 icon="entypo:medal"
+//                                 color="#4D6674"
+//                                 style={{ fontSize: "1.5rem" }}
+//                               />
+//                               <h6 className="font-open-sans font-semibold text-sm text-primary">
+//                                 {award}
+//                               </h6>
+//                             </div>
+//                           </div>
+//                         ))}
+//                       </div>
+//                     )}
+//                     <div className="flex sm:flex-row flex-col flex-wrap gap-y-2 gap-x-2">
+//                       {project.demo && (
+//                         <ToggleButton
+//                           text="toggle demo"
+//                           handler={(active) => {
+//                             if (active) {
+//                               document.getElementById(project.title).src =
+//                                 project.thumbnail;
+//                             } else {
+//                               document.getElementById(
+//                                 project.title + " loader"
+//                               ).style.display = "block";
+//                               document.getElementById(
+//                                 project.title
+//                               ).style.filter = "brightness(50%)";
+//                               document.getElementById(project.title).src =
+//                                 project.demo;
+//                             }
+//                           }}
+//                         />
+//                       )}
+//                       {project.live && (
+//                         <LinkButton text="live site" link={project.live} />
+//                       )}
+//                       {project.repo && (
+//                         <LinkButton text="repo" link={project.repo} />
+//                       )}
+//                       {project.request && (
+//                         <LinkButton
+//                           text="request"
+//                           link={"mailto:wangb@berkeley.edu"}
+//                         />
+//                       )}
+//                     </div>
+//                   </div>
+//                 </div>
+//               )
+//           )}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };

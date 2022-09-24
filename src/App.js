@@ -5,6 +5,8 @@ import { About } from "./about";
 import { Projects } from "./projects";
 import { Work } from "./work";
 import { Snapshots } from "./snapshots";
+import { Teaching } from "./teaching";
+import { Notes } from "./notes";
 
 export function App() {
   return (
@@ -16,6 +18,12 @@ export function App() {
         </Route>
         <Route path="/projects">
           <Projects />
+        </Route>
+        <Route path="/notes">
+          <Notes />
+        </Route>
+        <Route path="/teaching">
+          <Teaching />
         </Route>
         <Route path="/work">
           <Work />
