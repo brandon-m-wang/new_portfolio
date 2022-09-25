@@ -9,7 +9,8 @@ html,
 body,
 #root,
 .App {
-  background: url("https://live.staticflickr.com/7201/6777465884_72281c9902_k.jpg");
+  /* background: url("https://live.staticflickr.com/7201/6777465884_72281c9902_k.jpg"); */
+  background: #dbdbdb;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;

@@ -2,6 +2,7 @@ import { Logo } from "./logo";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Home } from "./home";
 import { About } from "./about";
+import { CV } from "./cv";
 import { Projects } from "./projects";
 import { Work } from "./work";
 import { Snapshots } from "./snapshots";
@@ -11,9 +12,9 @@ import { Notes } from "./notes";
 export function App() {
   return (
     <Router>
-      <Logo />
+      {/* <Logo /> */}
       <Switch>
-        <Route path="/about">
+        {/* <Route path="/about">
           <About />
         </Route>
         <Route path="/projects">
@@ -30,6 +31,9 @@ export function App() {
         </Route>
         <Route path="/snaps">
           <Snapshots />
+        </Route> */}
+        <Route path="/cv">
+          <CV />
         </Route>
         <Route path="/">
           <Home />
